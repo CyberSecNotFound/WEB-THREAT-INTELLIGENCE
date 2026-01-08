@@ -10,23 +10,30 @@ def run_engine(url):
     total_score = 0
     report = []
 
+    # URL analysis
     s, r = analyze_url(url)
     total_score += s
     report += r
 
-    domain = ".".join(tldextract.extract(url)[1:])
+    # FIXED domain extraction
+    ext = tldextract.extract(url)
+    domain = f"{ext.domain}.{ext.suffix}"
+
     s, r = whois_check(domain)
     total_score += s
     report.append(r)
 
+    # Content scan
     s, r = content_scan(url)
     total_score += s
     report += r
 
+    # Malware scan
     s, r = malware_scan(url)
     total_score += s
     report += r
 
+    # ML prediction
     ml = ml_predict(url, total_score)
     if ml == 1:
         total_score += 40
