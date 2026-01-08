@@ -52,9 +52,7 @@ cd WEB-THREAT-INTELLIGENCE
 pip install -r requirements.txt
 ```
 Recommended: Python 3.9+
-```txt
-python main.py
-```
+
 ## ▶️ Usage
 
 Run the scanner:
@@ -94,3 +92,6 @@ SOC Automation
 Threat Intelligence Collection
 
 Phishing Campaign Analysis
+
+
+Stay safe. Think before you click.
