@@ -57,6 +57,7 @@ Recommended: Python 3.9+
 
 Run the scanner:
 ```txt
+python ml/train.py
 python main.py
 
 ```
